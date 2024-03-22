@@ -14,20 +14,20 @@ export default function InputForm() {
     };
 
     return (
-        <form onSubmit={enrollForm}>
-            <label>제목</label>
+        <form className="m-20 flex " onSubmit={enrollForm}>
+            <label className=" mr-3">제목</label>
             <input
-                className="border-solid border-2 border-indigo-600"
+                className="border-solid border-2 border-indigo-600  mr-3 w-2/5"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
             />
-            <label>내용</label>
+            <label className=" mr-3">내용</label>
             <input
-                className="border-solid border-2 border-indigo-600"
+                className="border-solid border-2 border-indigo-600  mr-3 w-2/5"
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
             />
-            <button className="border-solid border-2 border-indigo-600">추가</button>
+            <button className="border-solid border-2 border-indigo-600 ">추가</button>
         </form>
     );
 }
