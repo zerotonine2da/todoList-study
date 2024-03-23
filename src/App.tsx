@@ -7,11 +7,14 @@ import store from './redux/config/configStore';
 function App() {
     return (
         <Provider store={store}>
-            <h1 className="text-3xl font-bold underline">Todo List</h1>
-
-            <InputForm />
-            <TodoContent isDoneTodo={false} />
-            <TodoContent isDoneTodo={true} />
+            <header>
+                <h1 className="text-3xl font-bold underline">Todo List</h1>
+            </header>
+            <main>
+                <InputForm />
+                <TodoContent isDoneTodo={false} />
+                <TodoContent isDoneTodo={true} />
+            </main>
         </Provider>
     );
 }
