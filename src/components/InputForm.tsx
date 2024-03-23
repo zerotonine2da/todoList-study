@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function InputForm() {
+const InputForm = () => {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
 
@@ -30,4 +30,6 @@ export default function InputForm() {
             <button className="border-solid border-2 border-indigo-600 ">추가</button>
         </form>
     );
-}
+};
+
+export default InputForm;
