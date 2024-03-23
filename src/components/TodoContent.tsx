@@ -1,12 +1,11 @@
-import { useSelector } from 'react-redux';
-import { RootState } from '../redux/config/configStore';
+import { useAppSelector } from '../redux/hook/useTodos';
 
 type props = {
     isDoneTodo: boolean;
 };
 
 const TodoContent = ({ isDoneTodo }: props) => {
-    const todos = useSelector((state: RootState) => state.todos);
+    const todos = useAppSelector((state) => state.todos);
 
     return (
         <>
