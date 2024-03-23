@@ -3,20 +3,18 @@ import './App.css';
 import InputForm from './components/InputForm';
 import TodoContent from './components/TodoContent';
 import store from './redux/config/configStore';
-import { FcViewDetails } from 'react-icons/fc';
+import Header from './components/Header';
+import DarkMode from './components/DarkMode';
 
 function App() {
     return (
         <Provider store={store}>
-            <div className="flex flex-col items-center">
-                <header>
-                    <div className="flex items-center justify-center">
-                        <FcViewDetails size={30} />
-
-                        <h1 className="text-3xl font-bold m-2"> Todo List</h1>
-                    </div>
+            <div className="flex flex-col items-center dark:bg-slate-950 dark:text-white">
+                <header className="flex items-center justify-center">
+                    <Header />
                 </header>
-                <main className=" border-solid border-2  w-[1000px]   ">
+                <main className=" border-solid border-2 w-[1000px]">
+                    <DarkMode />
                     <InputForm />
                     <TodoContent isDoneTodo={false} />
                     <TodoContent isDoneTodo={true} />
