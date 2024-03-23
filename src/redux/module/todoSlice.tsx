@@ -22,15 +22,22 @@ export const todoSlice = createSlice({
     initialState,
     reducers: {
         addTodos(state, action) {
-            console.log(state);
-            console.log(action.payload);
             state.push(action.payload);
         },
         deleteTodos(state, action) {
             return state.filter((todo) => todo.id !== action.payload);
         },
+        switchTodoState(state, action) {
+            return state.map((todo) => {
+                if (todo.id === action.payload) {
+                    return { ...todo, isDone: !todo.isDone };
+                } else {
+                    return todo;
+                }
+            });
+        },
     },
 });
 
-export const { addTodos, deleteTodos } = todoSlice.actions;
+export const { addTodos, deleteTodos, switchTodoState } = todoSlice.actions;
 export default todoSlice.reducer;
