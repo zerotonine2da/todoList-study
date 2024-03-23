@@ -1,5 +1,5 @@
-import { useAppDispatch, useAppSelector } from '../redux/hook/useTodos';
-import { deleteTodos, switchTodoState } from '../redux/module/todoSlice';
+import { useAppSelector } from '../redux/hook/useTodos';
+import Button from './Button';
 
 type props = {
     isDoneTodo: boolean;
@@ -7,7 +7,6 @@ type props = {
 
 const TodoContent = ({ isDoneTodo }: props) => {
     const todos = useAppSelector((state) => state.todos);
-    const dispatch = useAppDispatch();
 
     return (
         <>
@@ -19,18 +18,9 @@ const TodoContent = ({ isDoneTodo }: props) => {
                         <div key={todo.id} className="border-solid border-2 border-indigo-600  ">
                             <h1>{todo.title}</h1>
                             <h3>{todo.content}</h3>
-                            <button
-                                className="border-solid border-2 border-indigo-600 mr-5 "
-                                onClick={() => dispatch(deleteTodos(todo.id))}
-                            >
-                                삭제
-                            </button>
-                            <button
-                                className="border-solid border-2 border-indigo-600 "
-                                onClick={() => dispatch(switchTodoState(todo.id))}
-                            >
-                                {todo.isDone ? '취소' : '완료'}
-                            </button>
+
+                            <Button TodoId={todo.id} TodoState={'삭제'} />
+                            <Button TodoId={todo.id} TodoState={todo.isDone ? '취소' : '완료'} />
                         </div>
                     );
                 })}
