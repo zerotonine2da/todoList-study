@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import uuid4 from 'uuid4';
-import { Todo } from '../../type/todo';
-
+import { Todo } from '../../type/Todo';
 const initialState: Todo[] = [
     {
         title: 'Redux Toolkit Todo',
