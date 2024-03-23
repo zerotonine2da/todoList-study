@@ -35,9 +35,14 @@ export default function Button({ TodoId, TodoState }: props) {
         dispatch(switchTodoState(TodoId));
     };
 
+    const buttonClass =
+        button === '삭제'
+            ? 'border-red-500  hover:bg-red-500 text-red-700'
+            : 'border-blue-500 hover:bg-blue-500 text-blue-700 ';
+
     return (
         <button
-            className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mr-3 "
+            className={`bg-transparent font-semibold hover:text-white py-2 px-4 border rounded mr-2 ${buttonClass}`}
             onClick={onClickButton}
         >
             {button}

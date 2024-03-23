@@ -30,20 +30,26 @@ const InputForm = () => {
 
     return (
         <form className="m-20 flex-col " onSubmit={enrollForm}>
-            <div className="mb-5 ">
-                <label className=" mr-3">제목</label>
+            <div className="mb-5 flex align-items: center items-center">
                 <input
-                    className=" border-b-2 border-solid border-indigo-600 mr-3 w-2/5 "
-                    placeholder="Write Title"
+                    className=" w-full h-full bg-transparent outline-0 
+                     placeholder-shown:border-t-blue-gray-200 border 
+                     focus:border-2 
+                     text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 
+                     focus:border-blue-500 "
+                    placeholder="제목을 입력하세요."
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                 />
             </div>
-            <div className="mb-5">
-                <label className=" mr-3">내용</label>
+            <div className="mb-5 flex align-items: center items-center">
                 <input
-                    className="border-b-2 border-solid  border-indigo-600 mr-3 w-2/5"
-                    placeholder="Write Content"
+                    className=" w-full h-full bg-transparent outline-0 
+                   placeholder-shown:border-t-blue-gray-200 border 
+                   focus:border-2 
+                   text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 
+                   focus:border-blue-500 "
+                    placeholder="내용을 입력하세요."
                     value={content}
                     onChange={(e) => setContent(e.target.value)}
                 />
