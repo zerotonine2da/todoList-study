@@ -6,7 +6,7 @@ type props = {
 
 const TodoContent = ({ isDoneTodo }: props) => {
     const todos = useAppSelector((state) => state.todos);
-
+    console.log('todos', todos);
     return (
         <>
             <div>{isDoneTodo ? <>Todo</> : <>Done</>} </div>

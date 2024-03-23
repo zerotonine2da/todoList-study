@@ -1,12 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import uuid4 from 'uuid4';
-
-export interface Todo {
-    title: string;
-    content: string;
-    isDone: boolean;
-    id: string;
-}
+import { Todo } from '../../type/todo';
 
 const initialState: Todo[] = [
     {
@@ -27,12 +21,14 @@ export const todoSlice = createSlice({
     name: 'todo',
     initialState,
     reducers: {
-        getTodos(state, action) {
+        addTodos(state, action) {
+            console.log(state);
+            console.log(action.payload);
             state.push(action.payload);
         },
-        deleteTodos() {},
+        deleteTodos(state, action) {},
     },
 });
 
-export const { getTodos, deleteTodos } = todoSlice.actions;
+export const { addTodos, deleteTodos } = todoSlice.actions;
 export default todoSlice.reducer;

@@ -1,8 +1,13 @@
 import { useState } from 'react';
+import { useAppDispatch } from '../redux/hook/useTodos';
+import { addTodos } from '../redux/module/todoSlice';
+import uuid4 from 'uuid4';
 
 const InputForm = () => {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
+
+    const dispatch = useAppDispatch();
 
     const enrollForm = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -10,7 +15,17 @@ const InputForm = () => {
             alert('제목과 내용 모두 입력해주세요.');
             return;
         }
+
+        const newTodo = {
+            title,
+            content,
+            isDone: false,
+            id: uuid4(),
+        };
         //추가
+        dispatch(addTodos(newTodo));
+        setTitle('');
+        setContent('');
     };
 
     return (
