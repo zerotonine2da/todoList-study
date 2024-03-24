@@ -5,7 +5,7 @@ import { Todo } from '../../type/Todo';
 const initialState: Todo[] = [
     {
         title: 'Redux Toolkit Todo',
-        content: '툴킷',
+        content: '만들기',
         isDone: false,
         id: uuid4(),
     },
