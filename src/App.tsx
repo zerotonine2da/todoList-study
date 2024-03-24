@@ -13,8 +13,9 @@ function App() {
                 <header className="flex items-center justify-center">
                     <Header />
                 </header>
-                <main className=" w-[1000px]">
-                    <div className="flex flex-row-reverse">
+                {/* <main className=" w-[1000px]"> */}
+                <main className=" md:w-2/3  lg:w-2/4">
+                    <div className="flex flex-row-reverse mr-20 ">
                         <DarkMode />
                     </div>
                     <InputForm />

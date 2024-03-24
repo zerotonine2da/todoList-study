@@ -6,13 +6,25 @@ const initialState: Todo[] = [
     {
         title: 'Redux Toolkit Todo',
         content: '만들기',
-        isDone: false,
+        isDone: true,
         id: uuid4(),
     },
     {
         title: 'Next Todo...',
         content: '오예',
-        isDone: true,
+        isDone: false,
+        id: uuid4(),
+    },
+    {
+        title: '수영가기',
+        content: '저녁 8시',
+        isDone: false,
+        id: uuid4(),
+    },
+    {
+        title: '점심먹기',
+        content: '고등어구이 냠',
+        isDone: false,
         id: uuid4(),
     },
 ];
