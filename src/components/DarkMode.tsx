@@ -2,10 +2,15 @@ import { useAppDispatch, useAppSelector } from '../redux/hook/useTodos';
 import { toggleDarkMode } from '../redux/module/darkMode';
 import { MdSunny } from 'react-icons/md';
 import { FaMoon } from 'react-icons/fa';
+import { useEffect } from 'react';
 
 export default function DarkMode() {
     const isDarkMode = useAppSelector((state) => state.darkMode);
     const dispatch = useAppDispatch();
+
+    useEffect(() => {
+        clickToggleDarkMode();
+    }, []);
 
     const clickToggleDarkMode = () => {
         dispatch(toggleDarkMode());

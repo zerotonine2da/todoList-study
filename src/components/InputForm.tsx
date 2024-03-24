@@ -29,8 +29,8 @@ const InputForm = () => {
     };
 
     return (
-        <form className="m-20 flex-col " onSubmit={enrollForm}>
-            <div className="mb-5 flex align-items: center items-center">
+        <form className="m-20 flex flex-col " onSubmit={enrollForm}>
+            <div className="mb-5 flex">
                 <input
                     className=" w-full h-full bg-transparent outline-0 
                      placeholder-shown:border-t-blue-gray-200 border 
@@ -42,7 +42,7 @@ const InputForm = () => {
                     onChange={(e) => setTitle(e.target.value)}
                 />
             </div>
-            <div className="mb-5 flex align-items: center items-center">
+            <div className="mb-5 flex">
                 <input
                     className=" w-full h-full bg-transparent outline-0 
                    placeholder-shown:border-t-blue-gray-200 border 
@@ -54,7 +54,7 @@ const InputForm = () => {
                     onChange={(e) => setContent(e.target.value)}
                 />
             </div>
-            <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+            <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded ">
                 추가
             </button>
         </form>

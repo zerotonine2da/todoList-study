@@ -13,8 +13,10 @@ function App() {
                 <header className="flex items-center justify-center">
                     <Header />
                 </header>
-                <main className=" border-solid border-2 w-[1000px]">
-                    <DarkMode />
+                <main className=" w-[1000px]">
+                    <div className="flex flex-row-reverse">
+                        <DarkMode />
+                    </div>
                     <InputForm />
                     <TodoContent isDoneTodo={false} />
                     <TodoContent isDoneTodo={true} />
