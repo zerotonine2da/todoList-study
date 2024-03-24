@@ -6,10 +6,8 @@ const alertSlice = createSlice({
     reducers: {
         closeAlert(state, action) {
             if (action.payload) {
-                console.log('true');
                 return (state = false);
             } else {
-                console.log('false');
                 return (state = true);
             }
         },
